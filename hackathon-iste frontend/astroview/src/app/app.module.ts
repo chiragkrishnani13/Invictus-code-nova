@@ -9,6 +9,7 @@ import { HomepageModule } from './homepage/homepage.module';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { EducationModule } from './education/education.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     ObservationsModule,
     HomepageModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    EducationModule
 
   ],
   providers: [

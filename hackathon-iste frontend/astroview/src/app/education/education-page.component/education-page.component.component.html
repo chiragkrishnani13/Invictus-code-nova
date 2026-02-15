@@ -1,0 +1,78 @@
+<div class="edu-page">
+
+  <!-- HERO -->
+  <section class="edu-hero">
+    <div class="hero-content">
+      <h1>How Space Shapes Life on Earth</h1>
+      <p>Real‑time space technology that protects, connects, and guides humanity</p>
+    </div>
+  </section>
+
+  <!-- INFO CARDS -->
+  <section class="edu-section">
+    <h2>🌍 Space Technology Around You</h2>
+
+    <div class="edu-cards">
+
+      <div class="edu-glass-card">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" />
+        <h3>📡 Communication</h3>
+        <p>
+          Satellites power mobile networks, TV, internet, and emergency response systems.
+        </p>
+      </div>
+
+      <div class="edu-glass-card">
+        <img src="https://imgs.search.brave.com/U2MVh-ecGIdNpEyJKzSLRscS66-pLTicExvFpI5tLss/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naXNn/ZW9ncmFwaHkuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE5/LzA2L3NhdGVsbGl0/ZS1tYXBzLWhlcmUt/bWFwcy03Njh4Mzcz/LmpwZw" />
+        <h3>📍 Navigation (GPS)</h3>
+        <p>
+          Google Maps, flights, ships, delivery apps — all rely on satellite navigation.
+        </p>
+      </div>
+
+      <div class="edu-glass-card">
+        <img src="https://imgs.search.brave.com/isDUQRv7YO3qDbgtMQ72fmdevLjkS4OT16ZdBDJAr8g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lYXJ0/aGRhdGEubmFzYS5n/b3YvczNmcy1wdWJs/aWMvc3R5bGVzL2hk/c19nZW5lcmljX2Nh/cmQvcHVibGljLzIw/MjUtMDEvRWFydGhk/YXRhX1dlYmluYXJf/SmFudWFyeTIwMjVf/SHVycmljYW5lTWls/dG9uX1RST1BJQ1Nf/VEhVTUJOQUlMXzcy/MXB4JTIwYnklMjA1/MTVweF90aF8wLmpw/Zz9WZXJzaW9uSWQ9/c2tSckxhWlBFMjd2/QjlhU29tcWtBaUhP/U0Q5Yk5nVjMmaXRv/az1WbmN0VFhZbQ" />
+        <h3>🌪️ Disaster Management</h3>
+        <p>
+          Cyclones, floods, and wildfires are tracked early using space‑based systems.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REAL TIME IMPACT -->
+  <section class="edu-impact">
+    <h2>🚨 Real‑Time Impact</h2>
+    <p>
+      Satellites detect cyclones days before landfall, helping governments evacuate
+      millions and save lives.
+    </p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="edu-quiz">
+    <h2>🧪 Test Your Knowledge</h2>
+    <p class="quiz-question">
+      Which daily service depends on space technology?
+    </p>
+
+    <div class="quiz-options">
+      <button (click)="select('A')">GPS Navigation</button>
+      <button (click)="select('B')">Weather Forecast</button>
+      <button (click)="select('C')">Satellite TV</button>
+      <button
+        class="correct"
+        [class.active]="selected === 'D'"
+        (click)="select('D')"
+      >
+        All of the above
+      </button>
+    </div>
+
+    <p class="quiz-result" *ngIf="selected">
+      ✅ Correct! Space technology powers all these services.
+    </p>
+  </section>
+
+</div>
