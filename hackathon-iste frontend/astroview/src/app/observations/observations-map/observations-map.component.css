@@ -1,0 +1,120 @@
+.map-card {
+  width: 100%;
+  height: 100%;
+  background: #11162a;
+  border-radius: 18px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px 10px;
+}
+
+.map-header .title {
+  color: #e6e9f2;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.legend {
+  font-size: 11px;
+  color: #9aa3b2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.meteor {
+  background: #7c7cff;
+  box-shadow: 0 0 8px rgba(124, 124, 255, 0.8);
+}
+.dot.satellite {
+  background: #2ee6a6;
+  box-shadow: 0 0 8px rgba(46, 230, 166, 0.8);
+}
+.dot.planet {
+  background: #4dabf7;
+  box-shadow: 0 0 8px rgba(77, 171, 247, 0.8);
+}
+
+.map-container {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: radial-gradient(circle at center, rgba(124,124,255,0.12), transparent 60%);
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.1);
+  opacity: 0.9;
+}
+
+/* Pins */
+.pin {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.pin::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: pulse 2s infinite;
+}
+
+.pin.meteor {
+  background: #7c7cff;
+  box-shadow: 0 0 12px rgba(124, 124, 255, 0.9);
+}
+.pin.meteor::after {
+  box-shadow: 0 0 18px rgba(124, 124, 255, 0.6);
+}
+
+.pin.satellite {
+  background: #2ee6a6;
+  box-shadow: 0 0 12px rgba(46, 230, 166, 0.9);
+}
+.pin.satellite::after {
+  box-shadow: 0 0 18px rgba(46, 230, 166, 0.6);
+}
+
+.pin.planet {
+  background: #4dabf7;
+  box-shadow: 0 0 12px rgba(77, 171, 247, 0.9);
+}
+.pin.planet::after {
+  box-shadow: 0 0 18px rgba(77, 171, 247, 0.6);
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 0.25; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+:host {
+  display: block;
+  padding: 12px;
+}

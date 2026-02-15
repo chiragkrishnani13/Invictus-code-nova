@@ -1,0 +1,26 @@
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr; /* map | list */
+  gap: 32px;
+  padding: 20px 28px;
+  align-items: start;
+}
+
+/* MAP SIDE */
+.map-wrapper {
+  min-height: 520px;
+  display: flex;
+}
+
+/* LIST SIDE */
+.list-wrapper {
+  height: 100%;
+  display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

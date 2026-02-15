@@ -1,0 +1,25 @@
+<div class="observations-layout">
+
+  <!-- LEFT: MAP (ONLY COMPONENT CALL) -->
+  <div class="map-section">
+    <app-observations-map
+      [observations]="observations">
+    </app-observations-map>
+  </div>
+
+  <!-- RIGHT: LIST -->
+  <div class="list-card">
+    <div class="list-header">
+      <h2>Recent Observations</h2>
+      <span class="count">{{ observations.length }} items</span>
+    </div>
+
+    <div class="list-body">
+      <app-observation-card
+        *ngFor="let obs of observations"
+        [data]="obs">
+      </app-observation-card>
+    </div>
+  </div>
+
+</div>

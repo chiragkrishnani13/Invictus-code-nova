@@ -1,0 +1,16 @@
+<div class="observations-page">
+  <app-observations-header (add)="openAddModal()"></app-observations-header>
+  <app-observations-filters></app-observations-filters>
+
+  <div class="page-body">
+    <!-- MAP HATA DIYA -->
+    <div class="right-panel">
+      <app-observations-list></app-observations-list>
+    </div>
+  </div>
+
+  <app-add-observation-modal
+    *ngIf="showAddModal"
+    (close)="closeAddModal()">
+  </app-add-observation-modal>
+</div>

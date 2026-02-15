@@ -1,0 +1,20 @@
+<div class="auth-page">
+  <div class="auth-card">
+    <h1>Create Account 🌌</h1>
+    <p class="subtitle">Join the space community</p>
+
+    <form [formGroup]="registerForm">
+      <input type="text" placeholder="Full Name" formControlName="name"/>
+      <input type="email" placeholder="Email" formControlName="email"/>
+      <input type="password" placeholder="Password" formControlName="password"/>
+
+      <input type="text" placeholder="City" formControlName="city"/>
+      <input type="text" placeholder="Country" formControlName="country"/>
+      <button class="primary-btn" (click)="registerkaro()">Register</button>
+    </form>
+
+    <div class="links">
+      <a href="/login">Already have an account? Login</a>
+    </div>
+  </div>
+</div>

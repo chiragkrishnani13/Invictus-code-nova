@@ -1,0 +1,72 @@
+.filters-bar {
+  width: 100%;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0b1020;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.left-filters {
+  display: flex;
+  gap: 16px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-group label {
+  font-size: 11px;
+  color: #9aa3b2;
+}
+
+.filter-group select {
+  background: #11162a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e6e9f2;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  outline: none;
+}
+
+.filter-group select:focus {
+  border-color: rgba(124, 124, 255, 0.6);
+  box-shadow: 0 0 0 2px rgba(124, 124, 255, 0.15);
+}
+
+.right-toggle {
+  display: flex;
+  gap: 6px;
+  background: #11162a;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  justify-content: flex-end;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #9aa3b2;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  color: #e6e9f2;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #7c7cff, #5f5cff);
+  color: #0b1020;
+  box-shadow: 0 0 12px rgba(124, 124, 255, 0.6);
+}

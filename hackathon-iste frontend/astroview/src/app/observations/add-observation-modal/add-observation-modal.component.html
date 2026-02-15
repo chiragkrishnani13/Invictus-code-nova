@@ -1,0 +1,91 @@
+<div class="modal-backdrop">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2>Add New Observation 🌌</h2>
+      <button class="close-btn" (click)="close.emit()">✕</button>
+    </div>
+
+    <form class="modal-body" (ngSubmit)="submitObservation()">
+
+      <!-- 📸 Upload box -->
+      <div class="upload-box">
+        <span *ngIf="!selectedFileName">📸 Upload Image</span>
+        <span *ngIf="selectedFileName">📎 {{ selectedFileName }}</span>
+
+        <input
+          type="file"
+          accept="image/*"
+          (change)="onFileSelected($event)"
+        />
+      </div>
+
+      <!-- 📝 Title -->
+      <div class="row">
+        <input
+          type="text"
+          placeholder="Title (e.g., Meteor spotted in Pune)"
+          [(ngModel)]="title"
+          name="title"
+          required
+        />
+      </div>
+
+      <!-- 📝 Description -->
+      <div class="row">
+        <textarea
+          rows="3"
+          placeholder="Short description"
+          [(ngModel)]="description"
+          name="description"
+          required>
+        </textarea>
+      </div>
+
+      <!-- 🛰️ Event type + City -->
+      <div class="row two-col">
+        <select
+          [(ngModel)]="eventType"
+          name="eventType"
+          required>
+          <option value="">Event Type</option>
+          <option value="METEOR">Meteor</option>
+          <option value="SATELLITE">Satellite</option>
+          <option value="PLANET">Planet</option>
+          <option value="AURORA">Aurora</option>
+          <option value="OTHER">Other</option>
+        </select>
+
+        <input
+          type="text"
+          placeholder="City"
+          [(ngModel)]="city"
+          name="city"
+          required
+        />
+      </div>
+
+      <!-- 📅 Date + Time (UI only, backend auto-handles time) -->
+      <div class="row two-col">
+        <input type="date" disabled />
+        <input type="time" disabled />
+      </div>
+
+      <!-- 🔘 Buttons -->
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="secondary-btn"
+          (click)="close.emit()">
+          Cancel
+        </button>
+
+        <button
+          type="submit"
+          class="primary-btn">
+          Submit
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

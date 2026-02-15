@@ -1,0 +1,35 @@
+<div class="obs-card">
+  <div class="thumb">
+   <img [src]="imageUrl" alt="Observation">
+  </div>
+
+  <div class="content">
+    <h3 class="title">{{ data.title }}</h3>
+
+    <div class="meta">
+      <span class="badge">{{ data.eventType }}</span>
+      <span class="location">📍 {{ data.locationName }}</span>
+      <span class="time">🕒 {{ data.observedAt | date:'shortTime' }}</span>
+    </div>
+
+    <p class="desc">
+      {{ data.description }}
+    </p>
+
+    <div class="footer">
+      <div class="stats">
+         <span class="clickable" (click)="upvote()">
+    👍 {{ data.upvotes || 0 }}
+  </span>
+
+  <span>
+    👁️ {{ data.viewCount || 0 }}
+  </span>
+       
+      <!-- </div>
+      <span class="status pending">
+        {{ data.verificationStatus }}
+      </span>
+    </div> -->
+  </div>
+</div>

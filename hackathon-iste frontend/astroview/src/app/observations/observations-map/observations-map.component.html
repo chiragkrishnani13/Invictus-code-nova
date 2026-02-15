@@ -1,0 +1,27 @@
+<div class="map-card">
+  <div class="map-header">
+    <span class="title">Map View</span>
+    <span class="legend">
+      <span class="dot meteor"></span> Meteor
+      <span class="dot satellite"></span> Satellite
+      <span class="dot planet"></span> Planet
+    </span>
+  </div>
+
+  <div class="map-container">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+      alt="World Map"
+      class="map-image"
+    />
+
+    <span
+      *ngFor="let pin of pins"
+      class="pin"
+      [ngClass]="pin.type"
+      [style.top]="pin.top"
+      [style.left]="pin.left"
+      [title]="pin.title">
+    </span>
+  </div>
+</div>

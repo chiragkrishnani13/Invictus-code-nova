@@ -1,0 +1,68 @@
+.obs-header {
+  width: 100%;
+  height: 80px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(180deg, #0e1430 0%, #0b1020 100%);
+  border-bottom: 1px solid rgba(124, 124, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-row .icon {
+  font-size: 20px;
+  filter: drop-shadow(0 0 6px rgba(124, 124, 255, 0.6));
+}
+
+.obs-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e6e9f2;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #9aa3b2;
+}
+
+.add-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #7c7cff, #5f5cff);
+  color: #0b1020;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+
+  box-shadow: 0 0 0 rgba(124, 124, 255, 0.6);
+  transition: all 0.2s ease;
+}
+
+.add-btn:hover {
+  box-shadow: 0 0 16px rgba(124, 124, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}

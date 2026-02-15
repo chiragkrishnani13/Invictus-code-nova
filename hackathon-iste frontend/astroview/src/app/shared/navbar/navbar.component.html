@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo">AstroView</span>
+  </div>
+
+  <div class="nav-right" *ngIf="user; else loginBlock">
+    <span class="user-name">
+  👤 {{ user.name }}
+</span>
+
+  </div>
+
+  <ng-template #loginBlock>
+    <button class="login-btn">
+      Login
+    </button>
+  </ng-template>
+</nav>

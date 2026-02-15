@@ -1,0 +1,34 @@
+<div class="auth-page">
+  <div class="auth-card">
+
+    <h1>Welcome Back 🚀</h1>
+    <p class="subtitle">Login to explore the universe</p>
+
+    <!-- 🔹 FORM START -->
+    <form [formGroup]="loginForm">
+
+      <input 
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+
+      <input 
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+
+      <button class="primary-btn" type="submit" (click)="loginkaro()">
+        Login
+      </button>
+
+    </form>
+    <!-- 🔹 FORM END -->
+
+    <div class="links">
+      <a routerLink="/register">Create Account</a>
+    </div>
+
+  </div>
+</div>
