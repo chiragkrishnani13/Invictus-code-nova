@@ -1,0 +1,47 @@
+<div class="city-events-page">
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>🌌 City-based Space Events</h1>
+    <p>Discover upcoming sky events in your city and replay what you missed</p>
+  </header>
+
+  <!-- City Search -->
+  <section class="search-section">
+    <app-city-search></app-city-search>
+  </section>
+
+  <!-- Events Grid -->
+  <section class="events-grid">
+
+    <!-- Upcoming -->
+    <div class="upcoming">
+      <h2>Upcoming Events</h2>
+      <app-upcoming-events></app-upcoming-events>
+    </div>
+
+    <!-- Missed / Replay -->
+    <div class="missed">
+      <h2>Missed Events (Replay)</h2>
+
+      <!-- Multiple cards demo -->
+      <app-replay-card (viewReplay)="openReplayModal()"></app-replay-card>
+      <app-replay-card (viewReplay)="openReplayModal()"></app-replay-card>
+      <app-replay-card (viewReplay)="openReplayModal()"></app-replay-card>
+
+    </div>
+
+  </section>
+
+  <!-- Replay Modal -->
+  <app-replay-viewer-modal
+    [open]="isModalOpen"
+    (closed)="closeReplayModal()"
+    [title]="modalData.title"
+    [city]="modalData.city"
+    [date]="modalData.date"
+    [description]="modalData.description"
+    [images]="modalData.images">
+  </app-replay-viewer-modal>
+
+</div>

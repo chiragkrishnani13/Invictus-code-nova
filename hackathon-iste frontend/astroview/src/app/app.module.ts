@@ -26,8 +26,7 @@ import { CommonModule } from '@angular/common';
     HomepageModule,
     SharedModule,
     HttpClientModule,
-    EducationModule,
-    CommonModule
+
 
   ],
   providers: [

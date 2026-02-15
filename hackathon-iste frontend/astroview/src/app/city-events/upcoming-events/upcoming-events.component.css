@@ -1,0 +1,76 @@
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #0b1020;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  border-color: rgba(124, 124, 255, 0.6);
+  box-shadow: 0 0 16px rgba(124, 124, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.event-left h3 {
+  margin: 4px 0 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e6e9f2;
+}
+
+.meta {
+  margin: 0;
+  font-size: 11px;
+  color: #9aa3b2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badge.satellite {
+  color: #2ee6a6;
+  border: 1px solid rgba(46, 230, 166, 0.6);
+  box-shadow: 0 0 8px rgba(46, 230, 166, 0.25);
+}
+
+.badge.meteor {
+  color: #7c7cff;
+  border: 1px solid rgba(124, 124, 255, 0.6);
+  box-shadow: 0 0 8px rgba(124, 124, 255, 0.25);
+}
+
+.badge.planet {
+  color: #4dabf7;
+  border: 1px solid rgba(77, 171, 247, 0.6);
+  box-shadow: 0 0 8px rgba(77, 171, 247, 0.25);
+}
+
+.time-pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(124, 124, 255, 0.15);
+  color: #7c7cff;
+  border: 1px solid rgba(124, 124, 255, 0.4);
+}
