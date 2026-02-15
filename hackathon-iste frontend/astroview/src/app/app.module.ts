@@ -9,11 +9,21 @@ import { HomepageModule } from './homepage/homepage.module';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { CityEventsPageComponent } from './city-events-page/city-events-page.component';
+import { CitySearchComponent } from './city-search/city-search.component';
+import { ReplayCardComponent } from './replay-card/replay-card.component';
+import { ReplayViewerModalComponent } from './replay-viewer-modal/replay-viewer-modal.component';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CityEventsPageComponent,
+    CitySearchComponent,
+    ReplayCardComponent,
+    ReplayViewerModalComponent,
+    UpcomingEventsComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +32,8 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     ObservationsModule,
     HomepageModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    CityEventsModule
 
   ],
   providers: [

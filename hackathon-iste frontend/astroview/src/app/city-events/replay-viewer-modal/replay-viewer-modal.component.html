@@ -1,0 +1,31 @@
+<div *ngIf="open" class="replay-modal-overlay">
+  <div class="replay-modal">
+
+    <button class="close-btn" (click)="close()">✕</button>
+
+    <div class="media-section" *ngIf="images.length">
+      <img [src]="images[currentIndex]" />
+    </div>
+
+    <div class="slider-controls" *ngIf="images.length > 1">
+      <button (click)="prev()">⟨</button>
+
+      <div class="dots">
+        <span
+          class="dot"
+          *ngFor="let _ of images; let i = index"
+          [class.active]="i === currentIndex">
+        </span>
+      </div>
+
+      <button (click)="next()">⟩</button>
+    </div>
+
+    <div class="info-section">
+      <h2>{{ title }}</h2>
+      <p class="meta">📍 {{ city }} • 🕒 {{ date }}</p>
+      <p class="description">{{ description }}</p>
+    </div>
+
+  </div>
+</div>

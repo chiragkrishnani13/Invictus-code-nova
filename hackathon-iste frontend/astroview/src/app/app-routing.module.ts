@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path:'',
     component:LoginComponent
+  },
+  {
+    path:'city-events',
+    component:CityEventsPageComponent
   }
  
   
