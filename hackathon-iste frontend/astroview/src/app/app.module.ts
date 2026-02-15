@@ -10,6 +10,8 @@ import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { EducationModule } from './education/education.module';
+import { CommonModule } from '@angular/common';   
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { EducationModule } from './education/education.module';
     HomepageModule,
     SharedModule,
     HttpClientModule,
-    EducationModule
+    EducationModule,
+    CommonModule
 
   ],
   providers: [

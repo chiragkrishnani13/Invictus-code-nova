@@ -1,0 +1,22 @@
+<div class="overlay">
+  <div class="modal">
+    <h2>{{ content.title }} Quiz</h2>
+
+    <div *ngFor="let q of questions" class="question">
+      <p>{{ q.question }}</p>
+
+      <label><input type="radio" [name]="q.questionId" value="A"
+        (change)="selected[q.questionId]='A'"> {{ q.optionA }}</label>
+
+      <label><input type="radio" [name]="q.questionId" value="B"
+        (change)="selected[q.questionId]='B'"> {{ q.optionB }}</label>
+
+      <label><input type="radio" [name]="q.questionId" value="C"
+        (change)="selected[q.questionId]='C'"> {{ q.optionC }}</label>
+
+      <button (click)="submit(q)">Submit</button>
+    </div>
+
+    <button class="close" (click)="close.emit()">Close</button>
+  </div>
+</div>

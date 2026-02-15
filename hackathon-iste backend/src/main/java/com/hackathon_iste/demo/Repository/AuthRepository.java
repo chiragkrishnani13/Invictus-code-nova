@@ -49,6 +49,7 @@ public class AuthRepository {
             FROM users
             WHERE email = ?
               AND active_yn = 1
+              
         """;
 
         return jdbcTemplate.queryForObject(

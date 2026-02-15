@@ -1,0 +1,79 @@
+<!-- MAIN EDUCATION SECTION -->
+<section class="edu-section">
+
+  <h2 class="edu-title">🌍 Space Education</h2>
+
+  <!-- TOP CARDS -->
+  <div class="edu-grid">
+    <div class="edu-card" *ngFor="let c of contents" (click)="selectContent(c)">
+
+      <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" />
+
+      <div class="card-body">
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.explanation }}</p>
+        <span class="tag">{{ c.category }}</span>
+      </div>
+
+      <button (click)="openQuiz(c); $event.stopPropagation()">
+        🚀 Attempt Quiz
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<!-- REAL WORLD APPLICATIONS -->
+<section class="edu-section-block">
+  <h3>🌍 Real-World Applications</h3>
+
+  <div class="edu-box" *ngFor="let c of contents">
+    <h4>{{ c.title }}</h4>
+    <p>{{ c.realWorldUse }}</p>
+  </div>
+</section>
+
+<!-- CONCEPT BREAKDOWN -->
+<section class="edu-section-block">
+  <h3>🧩 Concept Breakdown</h3>
+
+  <div class="edu-box">
+    <h4>What is the concept?</h4>
+    <p>
+      {{ selectedContent?.explanation || 'Select a topic above to explore its concept in detail.' }}
+    </p>
+  </div>
+
+  <div class="edu-box">
+    <h4>Why is it important?</h4>
+    <p>
+      Understanding this concept helps explain natural phenomena and scientific observations.
+    </p>
+  </div>
+
+  <div class="edu-box">
+    <h4>Where do we see it?</h4>
+    <p>
+      From space missions to everyday life, this concept plays a crucial role.
+    </p>
+  </div>
+</section>
+
+<!-- KEY TAKEAWAYS -->
+<section class="edu-section-block">
+  <h3>✅ Key Takeaways</h3>
+
+  <ul class="edu-list">
+    <li>Scientific concepts explain natural laws</li>
+    <li>Gravity affects motion on Earth and in space</li>
+    <li>Space science drives technological advancements</li>
+    <li>Real-world applications enhance understanding</li>
+  </ul>
+</section>
+
+<!-- QUIZ MODAL -->
+<app-quiz-modal
+  *ngIf="showQuiz"
+  [content]="selectedContent"
+  (close)="closeQuiz()">
+</app-quiz-modal>
